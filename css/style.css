@@ -2,19 +2,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #fff;
   font-size: 18px;
   text-decoration: none;
   list-style: none;
-  /* color: rgba(45, 56, 90, 0.411);*/
+  color: rgba(45, 56, 90, 0.788);
 }
 body {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Nunito", sans-serif;
   font-family: "Open Sans", sans-serif;
   font-family: "Poppins", sans-serif;
   font-family: "Titillium Web", sans-serif;
-  background-image: url(../img/fundo1.jpg);
+  background-image: url(../img/fundo4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -25,7 +22,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 5px;
+  background-color: #ffffff31;
 }
 header ul {
   display: flex;
@@ -37,70 +34,216 @@ header ul {
 }
 
 .navbar ul li {
-  color: #fff;
-  transition: 0.5s;
   padding: 2%;
+  font-size: 20px;
   border-radius: 8px;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  font-weight: 300;
+  transition: 300ms;
 }
 .navbar ul li:hover {
-  background-color: rgba(218, 214, 214, 0.91);
+  background-color: #ffffff34;
   border-radius: 8px;
+  text-shadow: 1px 1px 1px rgb(216, 217, 236);
 }
 
-h1 {
+h1 a {
+  font-size: 35px;
+  cursor: pointer;
+  font-weight: 300;
+}
+h1 a:hover {
+  cursor: pointer;
+  font-size: 35px;
+  text-shadow: 1px 2px 2px rgba(97, 71, 192, 0.466);
+}
+h2 {
+  cursor: pointer;
   font-size: 55px;
+  font-weight: 600;
 }
-h2 a {
-  font-size: 45px;
-  color: aliceblue;
-  transition: 1s;
-}
-h2 a:hover {
-  font-size: 45px;
-  color: rgb(81, 136, 184);
+h2:hover {
+  cursor: pointer;
+  text-shadow: 1px 2px 2px rgba(97, 71, 192, 0.267);
 }
 h3 {
-  font-size: 28px;
-  font-weight: 200;
+  font-size: 24px;
+  font-weight: 300;
 }
-.about p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto;
+h3 a:hover {
+  font-size: 40px;
+  font-weight: 300;
+  color: rgb(81, 136, 184);
+  text-shadow: 1px 2px 2px rgb(142, 142, 165);
 }
-#seta {
-  margin-top: 2%;
+
+#arrow {
+  font-size: 20px;
+  color: #c4c4e4;
+  animation: blink 1s steps(5, start) infinite;
+  cursor: pointer;
+  margin-top: 1%;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.rotate {
+  transform: rotate(180deg);
+  transition: 600ms;
+}
+#animation {
+  transition: 300ms;
+}
+.active {
+  display: block !important;
 }
 .form {
   width: 40%;
   margin: 0 auto;
-  margin-top: 2%;
+  margin-top: 1.5%;
 }
-
+#about p {
+  max-width: 600px;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  /* color: #ffffff; */
+  background-color: #f3eff53f;
+  border-radius: 7px;
+  padding: 2%;
+}
 .form input {
-  width: 60%;
-  padding: 1%;
-  border-radius: 8px;
+  width: 50%;
+  padding: 1.5%;
+  border-radius: 7px 0 0 7px;
   cursor: pointer;
   border: none;
+  font-weight: 100;
+  font-size: 16px;
+  margin-right: -4px;
 }
 .form input:hover {
-  background-color: #d8d8d8;
-  transition: 3ms;
+  background-color: #f2efef;
+  transition: 300ms;
   border: none;
 }
-form button {
-  width: 15%;
-  padding: 1%;
-  border-radius: 8px;
-  color: #515151;
-  cursor: pointer;
+.form p {
+  margin-bottom: 3%;
+  font-weight: 300;
 }
-form button:hover {
-  background-color: #e1dfdf;
-  transition: 3ms;
+.form button {
+  width: 14%;
+  padding: 1.5%;
+  border-radius: 0 7px 7px 0;
+  background-image: linear-gradient(90deg, #cfcbf0, #e7dfedd0);
+  border: none;
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 16px;
+  transition: 1s;
+}
+.form button:hover {
+  background-image: linear-gradient(130deg, #cfcbf0, #cab3f5b0);
 }
 .container {
   margin-top: 2%;
   text-align: center;
+}
+
+footer {
+  background-color: #ffffff3f;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+  position: fixed;
+  width: 100%;
+}
+.logos img {
+  max-width: 90px;
+  max-height: 60x;
+  display: flexbox;
+  margin-right: 1.5%;
+  border-radius: 7px;
+}
+.logos {
+  float: center;
+  justify-content: center;
+  margin-top: 1%;
+  margin-left: 33%;
+  margin-right: 33%;
+}
+/******************* Responsividade *********************/
+@media (max-width: 720px) {
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .navbar ul li a {
+    font-size: 18px;
+  }
+  .navbar {
+    width: 100%;
+    margin-right: 40%;
+    margin-left: 22%;
+  }
+  .li {
+    margin-right: 2%;
+  }
+  h1 {
+    display: none;
+  }
+  h2 {
+    margin-top: 15%;
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  #about {
+    text-align: justify;
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  #about p {
+    font-size: 16px;
+  }
+  .form {
+    width: 100%;
+  }
+  .form p {
+    font-size: 18px;
+  }
+  input {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+  .botao {
+    width: 100%;
+    padding-bottom: 30%;
+  }
+  footer {
+    margin-top: 3%;
+    width: 100%;
+  }
+  .logos {
+    display: flex;
+    justify-content: center;
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+  .logos img {
+    margin-top: 20%;
+    margin-bottom: 5%;
+    width: 100%;
+    padding-right: 4%;
+  }
 }
